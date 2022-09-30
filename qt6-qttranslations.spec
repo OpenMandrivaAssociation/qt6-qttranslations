@@ -2,7 +2,7 @@
 # But can't make it noarch because of lib vs. lib64
 %define debug_package %{nil}
 
-%define beta rc
+#define beta rc
 #define snapshot 20200627
 %define major 6
 
@@ -10,7 +10,7 @@
 
 Name:		qt6-qttranslations
 Version:	6.4.0
-Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
+Release:	%{?beta:0.%{beta}.1}%{?snapshot:1.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qttranslations.git
 Source:		qttranslations-%{?snapshot:%{snapshot}}%{!?snapshot:%{version}}.tar.zst
