@@ -31,6 +31,7 @@ License:	LGPLv3/GPLv3/GPLv2
 Qt %{major} Translations
 
 %files -f core.lang
+%{_qtdir}/translations/catalogs.json
 
 %package assistant
 Summary: Translations for Qt Assistant
