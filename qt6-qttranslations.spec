@@ -10,7 +10,7 @@
 
 Name:		qt6-qttranslations
 Version:	6.5.0
-Release:	%{?beta:0.%{beta}.1}%{?snapshot:1.%{snapshot}.}1
+Release:	%{?beta:0.%{beta}.1}%{?snapshot:0.%{snapshot}.}2
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qttranslations.git
 Source:		qttranslations-%{?snapshot:%{snapshot}}%{!?snapshot:%{version}}.tar.zst
@@ -162,3 +162,4 @@ for i in *.qm; do
 done
 cd -
 cat qtbase.lang qt_help.lang qt.lang >core.lang
+%qt6_postinstall
