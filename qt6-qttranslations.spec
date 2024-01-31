@@ -2,7 +2,7 @@
 # But can't make it noarch because of lib vs. lib64
 %define debug_package %{nil}
 
-%define beta beta1
+%define beta beta2
 #define snapshot 20200627
 %define major 6
 
