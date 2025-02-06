@@ -9,7 +9,7 @@
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qttranslations
-Version:	6.8.1
+Version:	6.8.2
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qttranslations.git
@@ -32,6 +32,7 @@ Qt %{major} Translations
 
 %files -f core.lang
 %{_qtdir}/translations/catalogs.json
+%{_qtdir}/sbom/qttranslations-%{version}.spdx
 
 %package assistant
 Summary: Translations for Qt Assistant
