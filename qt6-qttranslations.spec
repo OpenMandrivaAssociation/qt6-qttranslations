@@ -9,7 +9,7 @@
 %define _qtdir %{_libdir}/qt%{major}
 
 Name:		qt6-qttranslations
-Version:	6.11.2
+Version:	6.12.0
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qttranslations.git
@@ -118,7 +118,9 @@ Translations for Qt SerialPort
 
 %package webengine
 Summary: Translations for Qt WebEngine
-Requires: %{_lib}Qt%{major}WebEngine = %{version}
+# WebEngine left the Qt release with 6.12. The packaged module stays at
+# 6.11.2 until Qt WebEngine 6.140.0, so this cannot require the same version.
+Requires: %{_lib}Qt%{major}WebEngine
 Supplements: %{_lib}Qt%{major}WebEngine
 
 %description webengine
