@@ -120,8 +120,9 @@ Translations for Qt SerialPort
 Summary: Translations for Qt WebEngine
 # WebEngine left the Qt release with 6.12. The packaged module stays at
 # 6.11.2 until Qt WebEngine 6.140.0, so this cannot require the same version.
-Requires: %{_lib}Qt%{major}WebEngine
-Supplements: %{_lib}Qt%{major}WebEngine
+# The library package is WebEngineCore; there is no libQt6WebEngine.
+Requires: %{_lib}Qt%{major}WebEngineCore
+Supplements: %{_lib}Qt%{major}WebEngineCore
 
 %description webengine
 Translations for Qt WebEngine
